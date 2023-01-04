@@ -1,18 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import imagem from '../../assets/images/icon-slider.svg'
+import { MainContext } from './MainContext'
 import './style.css'
+
 // excess height to improve interactive area / accessibility
-const height = '36px'
-const thumbHeight = 36
-const trackHeight = '16px'
+const height = '100px'
+const thumbHeight = 30
+const trackHeight = '10px'
 const img = '../../assets/images/icon-slider.svg'
 
 // colours
-const upperColor = '#edf5f9'
-const lowerColor = '#01ff3c'
-const thumbColor = '#000000'
-const thumbHoverColor = '#000000'
+const upperColor = '#ecf0fb'
+const lowerColor = '#99f3e3'
+const thumbColor = '#11d8c5'
+const thumbHoverColor = '#26a297'
 const upperBackground = `linear-gradient(to bottom, ${upperColor}, ${upperColor}) 100% 50% / 100% ${trackHeight} no-repeat transparent`
 const lowerBackground = `linear-gradient(to bottom, ${lowerColor}, ${lowerColor}) 100% 50% / 100% ${trackHeight} no-repeat transparent`
 
@@ -36,19 +38,17 @@ const Range = styled.input`
     display: block;
     appearance: none;
     max-width: 700px;
-    width: 100%;
+    width: 90%;
     margin: 0;
     height: ${height};
     cursor: pointer;
-
-    &:focus {
-        outline: none;
-    }
+    outline: none;
 
     &::-webkit-slider-runnable-track {
         width: 100%;
         height: ${height};
         background: ${lowerBackground};
+        border-radius: 100%;
     }
 
     &::-webkit-slider-thumb {
@@ -58,17 +58,20 @@ const Range = styled.input`
 
         position: relative;
         appearance: none;
-        height: ${thumbHeight}px;
-        width: ${thumbHeight}px;
+        height: 4rem;
+        width: 4rem;
         background: ${thumbColor};
         border-radius: 100%;
         border: 0;
         top: 50%;
         transform: translateY(-50%);
-        box-shadow: ${makeLongShadow(upperColor, '-10px')};
+        box-shadow: ${makeLongShadow(upperColor, '-25px')};
         transition: background-color 150ms;
+        cursor: pointer;
     }
-
+    &:active::-webkit-slider-thumb {
+        cursor: grabbing;
+    }
     &::-moz-range-track,
     &::-moz-range-progress {
         width: 100%;
@@ -98,34 +101,34 @@ const Range = styled.input`
         /* color needed to hide track marks */
         color: transparent;
         background: transparent;
-    }
 
-    &::-ms-fill-lower {
-        background: ${lowerBackground};
-    }
+        &::-ms-fill-lower {
+            background: ${lowerBackground};
+        }
 
-    &::-ms-fill-upper {
-        background: ${upperBackground};
-    }
+        &::-ms-fill-upper {
+            background: ${upperBackground};
+        }
 
-    &::-ms-thumb {
-        appearance: none;
-        height: ${thumbHeight};
-        width: ${thumbHeight};
-        background: ${thumbColor};
-        border-radius: 100%;
-        border: 0;
-        transition: background-color 150ms;
-        /* IE Edge thinks it can support -webkit prefixes */
-        top: 0;
-        margin: 0;
-        box-shadow: none;
-    }
+        &::-ms-thumb {
+            appearance: none;
+            height: ${thumbHeight};
+            width: ${thumbHeight};
+            background: ${thumbColor};
+            border-radius: 100%;
+            border: 0;
+            transition: background-color 150ms;
+            /* IE Edge thinks it can support -webkit prefixes */
+            top: 0;
+            margin: 0;
+            box-shadow: none;
+        }
 
-    &:hover,
-    &:focus {
-        &::-webkit-slider-thumb {
-            background-color: ${thumbHoverColor};
+        &:hover,
+        &:focus {
+            &::-webkit-slider-thumb {
+                background-color: ${thumbHoverColor};
+            }
         }
         &::-moz-range-thumb {
             background-color: ${thumbHoverColor};
@@ -142,9 +145,16 @@ const Teste = styled.div`
 `
 
 const Controller = () => {
+    let { rangeValue, setRangeValue } = useContext(MainContext)
+
+    console.log(rangeValue)
     return (
-        <div id="jonas">
-            <Range type="range" />
+        <div className="flex items-center justify-center border " id="jonas">
+            <Range
+                className="rounded-full"
+                type="range"
+                onChange={(e) => setRangeValue(e.target.value)}
+            />
         </div>
     )
 }
