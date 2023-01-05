@@ -1,0 +1,8 @@
+.img-bg {
+    width: 100vw;
+    height: 160px;
+    background-image: url('../../assets/images/pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

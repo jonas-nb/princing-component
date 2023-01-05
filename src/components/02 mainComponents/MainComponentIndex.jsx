@@ -1,17 +1,18 @@
-import React from "react";
-import BillingComponent from "./BillingComponent";
-import Controller from "./Controller";
-import MoneyComponent from "./MoneyComponent";
-
+import React from 'react'
+import BillingComponent from './BillingComponent'
+import Controller from './Controller'
+import MoneyComponent from './MoneyComponent'
+import PageViewsComponent from './PageViewsComponent'
+import './style.css'
 const MainComponentIndex = () => {
-  return (
-    <div>
-      <h2>100k pageviews</h2>
-      <Controller />
-      <MoneyComponent />
-      <BillingComponent />
-    </div>
-  );
-};
+    return (
+        <div className="card m-auto mt-10 rounded-lg border w-11/12 drop-shadow-sm">
+            <PageViewsComponent />
+            <Controller />
+            <MoneyComponent />
+            <BillingComponent />
+        </div>
+    )
+}
 
-export default MainComponentIndex;
+export default MainComponentIndex
