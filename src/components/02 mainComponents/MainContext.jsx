@@ -3,10 +3,10 @@ import React, { createContext, useState } from 'react'
 export const MainContext = createContext()
 
 export const MainProvider = ({ children }) => {
-    let [rangeValue, setRangeValue] = useState()
-    let [moneyValue, setMoneyValue] = useState()
-    let [billing, setBilling] = useState()
-    console.log(rangeValue)
+    let [rangeValue, setRangeValue] = useState({ min: 1, max: 4 })
+    let [moneyValue, setMoneyValue] = useState(28.0)
+    let [billing, setBilling] = useState(true)
+    let [discont, setDiscont] = useState()
     return (
         <MainContext.Provider
             value={{
@@ -16,6 +16,8 @@ export const MainProvider = ({ children }) => {
                 setMoneyValue,
                 billing,
                 setBilling,
+                discont,
+                setDiscont,
             }}
         >
             {children}

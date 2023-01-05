@@ -147,12 +147,13 @@ const Teste = styled.div`
 const Controller = () => {
     let { rangeValue, setRangeValue } = useContext(MainContext)
 
-    console.log(rangeValue)
     return (
         <div className="flex items-center justify-center border " id="jonas">
             <Range
                 className="rounded-full"
                 type="range"
+                min="1"
+                max="4"
                 onChange={(e) => setRangeValue(e.target.value)}
             />
         </div>
