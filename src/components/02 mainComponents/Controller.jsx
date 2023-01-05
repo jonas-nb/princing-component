@@ -148,7 +148,7 @@ const Controller = () => {
     let { rangeValue, setRangeValue } = useContext(MainContext)
 
     return (
-        <div className="flex items-center justify-center border " id="jonas">
+        <div className="flex items-center justify-center">
             <Range
                 className="rounded-full"
                 type="range"

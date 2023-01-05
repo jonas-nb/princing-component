@@ -6,7 +6,7 @@ const BillingComponent = () => {
     let { billing, setBilling } = useContext(MainContext)
 
     return (
-        <div>
+        <div className="border border-blue-500 flex justify-around items-center w-full h-10">
             <p>Monthly Billing</p>
             <input
                 id="nome"
@@ -15,7 +15,9 @@ const BillingComponent = () => {
                 onChange={() => setBilling(!billing)}
             />
             <p>Yearly Billing</p>
-            <div>-25%</div>
+            <div className="flex justify-center items-center w-14 h-7 bg-[#ffeae5] rounded-2xl text-md text-[#ff8c6e] font-[600]">
+                -25%
+            </div>
         </div>
     )
 }

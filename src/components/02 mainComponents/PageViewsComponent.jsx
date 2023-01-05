@@ -25,7 +25,7 @@ const PageViewsComponent = () => {
 
     return (
         <div>
-            <h2 className="mt-8 tracking-widest  uppercase font-[800] text-[#868fa6]">
+            <h2 className="mt-8 tracking-widest  uppercase font-[500] text-[#868fa6]">
                 {view}k pageviews
             </h2>
         </div>
