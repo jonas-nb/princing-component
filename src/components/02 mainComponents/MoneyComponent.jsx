@@ -10,7 +10,7 @@ const MoneyComponent = () => {
         discont,
         setDiscont,
     } = useContext(MainContext)
-    console.log(billing)
+    console.log(billing, discont, 'oi')
     useEffect(() => {
         if (rangeValue === '1') {
             setMoneyValue(5.0)

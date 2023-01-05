@@ -3,7 +3,7 @@ import MainComponentIndex from './MainComponentIndex'
 import { MainContext } from './MainContext'
 
 const BillingComponent = () => {
-    let { billing, setBilling, setDiscont } = useContext(MainContext)
+    let { billing, setBilling } = useContext(MainContext)
 
     return (
         <div>
