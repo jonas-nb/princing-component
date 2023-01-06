@@ -3,7 +3,7 @@ import MainText from './MainText'
 import './style.css'
 const ArticleHeaderIndex = () => {
     return (
-        <div className="img-bg mt-16">
+        <div className="img-bg w-full mt-20 m-auto ">
             <MainText />
         </div>
     )

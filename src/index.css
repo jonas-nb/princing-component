@@ -4,14 +4,11 @@
 
 :root {
     font-family: 'Manrope', sans-serif;
-
     line-height: 24px;
     font-weight: 400;
-
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
     background-color: #242424;
-
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -30,11 +27,14 @@ a:hover {
 
 body {
     font-family: 'Manrope', sans-serif;
+    font-size: 16px;
     margin: 0;
     display: flex;
+    place-content: center;
     min-width: 320px;
     min-height: 100vh;
     background-color: #f1f5fe;
+    background-size: cover;
 }
 
 h1 {

@@ -5,8 +5,9 @@ export const MainContext = createContext()
 export const MainProvider = ({ children }) => {
     let [rangeValue, setRangeValue] = useState({ min: 1, max: 4 })
     let [moneyValue, setMoneyValue] = useState(28.0)
-    let [billing, setBilling] = useState(true)
+    let [billing, setBilling] = useState(false)
     let [discont, setDiscont] = useState(28.0 - (28.0 * 25) / 100)
+
     return (
         <MainContext.Provider
             value={{

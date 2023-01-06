@@ -38,7 +38,7 @@ const Range = styled.input`
     display: block;
     appearance: none;
     max-width: 700px;
-    width: 90%;
+    width: 100%;
     margin: 0;
     height: ${height};
     cursor: pointer;
@@ -58,14 +58,14 @@ const Range = styled.input`
 
         position: relative;
         appearance: none;
-        height: 4rem;
-        width: 4rem;
+        height: 3rem;
+        width: 3rem;
         background: ${thumbColor};
         border-radius: 100%;
         border: 0;
         top: 50%;
         transform: translateY(-50%);
-        box-shadow: ${makeLongShadow(upperColor, '-25px')};
+        box-shadow: ${makeLongShadow(upperColor, '-17px')};
         transition: background-color 150ms;
         cursor: pointer;
     }
@@ -138,19 +138,13 @@ const Range = styled.input`
         }
     }
 `
-const Teste = styled.div`
-    width: 500px;
-    height: 500px;
-    background-color: red;
-`
 
 const Controller = () => {
-    let { rangeValue, setRangeValue } = useContext(MainContext)
+    let { setRangeValue } = useContext(MainContext)
 
     return (
-        <div className="flex items-center justify-center">
+        <div className="w-11/12 m-auto flex items-center justify-center">
             <Range
-                className="rounded-full"
                 type="range"
                 min="1"
                 max="4"

@@ -2,7 +2,7 @@ import React from 'react'
 
 const MainText = () => {
     return (
-        <div>
+        <div className="">
             <h1 className="pt-10 text-center font-[650] text-[1.3rem] text-[#1f2747]">
                 Simple, traffic-based pricing
             </h1>
