@@ -6,7 +6,7 @@ import PageViewsComponent from './PageViewsComponent'
 import './style.css'
 const MainComponentIndex = () => {
     return (
-        <div className="card m-auto mt-10 rounded-lg border w-11/12 drop-shadow-sm">
+        <div className="m-auto mt-10 w-11/12 h-[21rem] rounded-t-lg drop-shadow-sm bg-white ">
             <PageViewsComponent />
             <Controller />
             <MoneyComponent />

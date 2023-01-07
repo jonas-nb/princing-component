@@ -10,7 +10,7 @@ const MoneyComponent = () => {
         discont,
         setDiscont,
     } = useContext(MainContext)
-    console.log(billing, discont, 'oi')
+
     useEffect(() => {
         if (rangeValue === '1') {
             setMoneyValue(5.0)
@@ -28,9 +28,21 @@ const MoneyComponent = () => {
     }, [rangeValue])
 
     return (
-        <div>
-            <div>
-                ${billing === true ? discont : moneyValue} <span>/ month</span>
+        <div className="m-auto w-[11.1rem] h-11 flex justify-center items-center">
+            <div className="m-auto text-center w-full text-[2rem] font-[600] text-[#1b2959] flex items-center justify-between">
+                {billing === true ? (
+                    <div>
+                        {`$${discont < 10 ? '0' : ''}${discont}${
+                            discont > 10 ? '.00' : ''
+                        }
+                    `}
+                    </div>
+                ) : (
+                    <div>{`$${
+                        moneyValue < 10 ? '0' : ''
+                    }${moneyValue}.00`}</div>
+                )}
+                <span className="text-[0.75rem] text-[#868fa6]">/ month</span>
             </div>
         </div>
     )

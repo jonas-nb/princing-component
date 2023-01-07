@@ -1,11 +1,20 @@
-import React from "react";
+import React from 'react'
 
 const FooterButton = () => {
-  return (
-    <div>
-      <button>Start my trial</button>
-    </div>
-  );
-};
+    const menssageSubmit = function () {
+        alert('Muito obrigado por testar o componente 😍')
+    }
 
-export default FooterButton;
+    return (
+        <div>
+            <button
+                onClick={menssageSubmit}
+                className="btn block mt-10 rounded-3xl normal-case w-48 m-auto focus:outline-[#39e4a0]"
+            >
+                Start my trial
+            </button>
+        </div>
+    )
+}
+
+export default FooterButton
