@@ -6,7 +6,7 @@ import FooterComponentIndex from './components/03 FooterCompoents/FooterComponen
 
 const App = () => {
     return (
-        <div className="min-w-[375px] flex flex-col bo">
+        <div className="flex flex-col w-full lg:w-[50rem] border">
             <MainProvider>
                 <ArticleHeaderIndex />
                 <MainComponentIndex />

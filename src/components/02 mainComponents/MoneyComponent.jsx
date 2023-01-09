@@ -28,7 +28,7 @@ const MoneyComponent = () => {
     }, [rangeValue])
 
     return (
-        <div className="m-auto w-[11.1rem] h-11 flex justify-center items-center">
+        <div className="m-auto w-[11.1rem] h-11 flex justify-center items-center lg:mt-8">
             <div className="m-auto text-center w-full text-[2rem] font-[600] text-[#1b2959] flex items-center justify-between">
                 {billing === true ? (
                     <div>
