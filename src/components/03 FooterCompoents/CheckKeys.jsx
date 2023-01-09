@@ -4,15 +4,15 @@ import './style.css'
 const CheckKeys = () => {
     return (
         <div className="w-7/12 h-24 m-auto text-[#868fa6] mt-8 flex flex-col justify-between">
-            <div class="flex items-center gap-x-4 justify-center">
+            <div className="flex items-center gap-x-4 justify-center">
                 <BsCheck className="icone" />
                 <p>Unlimited websites</p>
             </div>
-            <div class="flex items-center gap-x-4 justify-center">
+            <div className="flex items-center gap-x-4 justify-center">
                 <BsCheck className="icone" />
                 <p>100% dara ownership</p>
             </div>
-            <div class="flex items-center gap-x-4 justify-center">
+            <div className="flex items-center gap-x-4 justify-center">
                 <BsCheck className="icone" />
                 <p>Email reports</p>
             </div>
