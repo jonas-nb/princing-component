@@ -9,7 +9,7 @@ const FooterButton = () => {
         <div>
             <button
                 onClick={menssageSubmit}
-                className="btn block mt-10 rounded-3xl normal-case w-48 m-auto focus:outline-[#39e4a0]"
+                className="btn block mt-10 lg:mt-0 rounded-3xl normal-case w-48 m-auto focus:outline-[#39e4a0]"
             >
                 Start my trial
             </button>

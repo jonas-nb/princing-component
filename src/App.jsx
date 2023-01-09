@@ -6,11 +6,15 @@ import FooterComponentIndex from './components/03 FooterCompoents/FooterComponen
 
 const App = () => {
     return (
-        <div className="flex flex-col w-full lg:w-[50rem] border">
+        <div className="flex flex-col w-full lg:w-[50rem]">
             <MainProvider>
                 <ArticleHeaderIndex />
                 <MainComponentIndex />
                 <FooterComponentIndex />
+                <p className="text-center mt-5">
+                    Create with <span className="line-through">❤</span> React by
+                    Jonas Batista
+                </p>
             </MainProvider>
         </div>
     )
